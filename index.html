@@ -627,53 +627,6 @@ body.sidebar-collapsed .sidebar-toggle{left:16px}
   min-width:36px;padding:6px 9px;font-size:12px;font-weight:800;cursor:pointer
 }
 .display-btn.active,.display-btn:hover{background:#5c3d91;color:#fff}
-.image-mode-btn{min-width:auto;padding:6px 11px}
-
-/* 字級變化：使用 CSS 變數 */
-:root{--ui-scale:1}
-body{font-size:calc(19px * var(--ui-scale))}
-.hero p{font-size:calc(21px * var(--ui-scale))}
-.section-head h2{font-size:calc(40px * var(--ui-scale))}
-.section-head p{font-size:calc(15px * var(--ui-scale))}
-.card h3{font-size:calc(29px * var(--ui-scale))}
-.card h4{font-size:calc(19px * var(--ui-scale))}
-.line{font-size:calc(20px * var(--ui-scale))}
-.line .txt{font-size:calc(22px * var(--ui-scale))}
-.line-detail{font-size:calc(16px * var(--ui-scale))}
-.expression .en{font-size:calc(23px * var(--ui-scale))}
-.expression .zh{font-size:calc(16px * var(--ui-scale))}
-.word{font-size:calc(29px * var(--ui-scale))}
-.meaning{font-size:calc(17px * var(--ui-scale))}
-.phrase b{font-size:calc(22px * var(--ui-scale))}
-.phrase span{font-size:calc(15px * var(--ui-scale))}
-.gpanel{font-size:calc(18px * var(--ui-scale))}
-.pattern{font-size:calc(27px * var(--ui-scale))}
-.qbox p{font-size:calc(19px * var(--ui-scale))}
-.option{font-size:calc(17px * var(--ui-scale))}
-.spell-zh{font-size:calc(18px * var(--ui-scale))}
-.spell-input{font-size:calc(17px * var(--ui-scale))}
-.spell-example{font-size:calc(16px * var(--ui-scale))}
-
-/* 圖片顯示模式 */
-body.image-contain .scene-img,
-body.image-contain .dialogue-photo,
-body.image-contain .phrase-img,
-body.image-contain .note-visual-img,
-body.image-contain .vimg,
-body.image-contain .modal-word-image{
-  background-size:contain!important;
-  background-repeat:no-repeat!important;
-  background-color:#faf7fb!important;
-}
-body:not(.image-contain) .scene-img,
-body:not(.image-contain) .dialogue-photo,
-body:not(.image-contain) .phrase-img,
-body:not(.image-contain) .note-visual-img,
-body:not(.image-contain) .vimg,
-body:not(.image-contain) .modal-word-image{
-  background-size:cover!important;
-}
-
 @media(max-width:760px){
   .display-controls{position:sticky;top:0;left:auto;margin:8px 10px 0;z-index:1350}
   .quick-nav-toggle{top:70px!important}
@@ -758,9 +711,179 @@ body:not(.image-contain) .modal-word-image{
   .quick-nav-title{font-size:13px}
 }
 
+
+/* 顯示控制簡化：僅保留字體大小 */
+.display-controls{padding:7px 9px!important}
+.quick-panel{padding-right:300px!important}
+@media(max-width:1200px){.quick-panel{padding-right:16px!important}}
+
+
+/* ===== 字體大小：跨瀏覽器穩定版 ===== */
+/* 中：預設 */
+body.font-medium{font-size:19px}
+body.font-medium .hero p{font-size:21px}
+body.font-medium .section-head h2{font-size:40px}
+body.font-medium .section-head p{font-size:15px}
+body.font-medium .card h3{font-size:29px}
+body.font-medium .card h4{font-size:19px}
+body.font-medium .line{font-size:20px}
+body.font-medium .line .txt{font-size:22px}
+body.font-medium .line-detail{font-size:16px}
+body.font-medium .expression .en{font-size:23px}
+body.font-medium .expression .zh{font-size:16px}
+body.font-medium .word{font-size:29px}
+body.font-medium .meaning{font-size:17px}
+body.font-medium .phrase b{font-size:22px}
+body.font-medium .phrase span{font-size:15px}
+body.font-medium .gpanel{font-size:18px}
+body.font-medium .pattern{font-size:27px}
+body.font-medium .qbox p{font-size:19px}
+body.font-medium .option{font-size:17px}
+body.font-medium .spell-zh{font-size:18px}
+body.font-medium .spell-input{font-size:17px}
+body.font-medium .spell-example{font-size:16px}
+body.font-medium .modal-body{font-size:17px}
+body.font-medium .dbox{font-size:16px}
+body.font-medium .quick-link{font-size:12px}
+
+/* 小 */
+body.font-small{font-size:17px}
+body.font-small .hero p{font-size:18px}
+body.font-small .section-head h2{font-size:34px}
+body.font-small .section-head p{font-size:13px}
+body.font-small .card h3{font-size:25px}
+body.font-small .card h4{font-size:17px}
+body.font-small .line{font-size:18px}
+body.font-small .line .txt{font-size:19px}
+body.font-small .line-detail{font-size:14px}
+body.font-small .expression .en{font-size:20px}
+body.font-small .expression .zh{font-size:14px}
+body.font-small .word{font-size:25px}
+body.font-small .meaning{font-size:15px}
+body.font-small .phrase b{font-size:19px}
+body.font-small .phrase span{font-size:13px}
+body.font-small .gpanel{font-size:16px}
+body.font-small .pattern{font-size:23px}
+body.font-small .qbox p{font-size:17px}
+body.font-small .option{font-size:15px}
+body.font-small .spell-zh{font-size:16px}
+body.font-small .spell-input{font-size:15px}
+body.font-small .spell-example{font-size:14px}
+body.font-small .modal-body{font-size:15px}
+body.font-small .dbox{font-size:14px}
+body.font-small .quick-link{font-size:11px}
+
+/* 大 */
+body.font-large{font-size:21px}
+body.font-large .hero p{font-size:24px}
+body.font-large .section-head h2{font-size:46px}
+body.font-large .section-head p{font-size:17px}
+body.font-large .card h3{font-size:33px}
+body.font-large .card h4{font-size:22px}
+body.font-large .line{font-size:23px}
+body.font-large .line .txt{font-size:25px}
+body.font-large .line-detail{font-size:18px}
+body.font-large .expression .en{font-size:26px}
+body.font-large .expression .zh{font-size:18px}
+body.font-large .word{font-size:33px}
+body.font-large .meaning{font-size:19px}
+body.font-large .phrase b{font-size:25px}
+body.font-large .phrase span{font-size:17px}
+body.font-large .gpanel{font-size:20px}
+body.font-large .pattern{font-size:30px}
+body.font-large .qbox p{font-size:21px}
+body.font-large .option{font-size:19px}
+body.font-large .spell-zh{font-size:20px}
+body.font-large .spell-input{font-size:19px}
+body.font-large .spell-example{font-size:18px}
+body.font-large .modal-body{font-size:19px}
+body.font-large .dbox{font-size:18px}
+body.font-large .quick-link{font-size:13px}
+
+/* 特大：教室遠距投影 */
+body.font-xlarge{font-size:23px}
+body.font-xlarge .hero p{font-size:27px}
+body.font-xlarge .section-head h2{font-size:52px}
+body.font-xlarge .section-head p{font-size:19px}
+body.font-xlarge .card h3{font-size:37px}
+body.font-xlarge .card h4{font-size:24px}
+body.font-xlarge .line{font-size:26px}
+body.font-xlarge .line .txt{font-size:29px}
+body.font-xlarge .line-detail{font-size:21px}
+body.font-xlarge .expression .en{font-size:30px}
+body.font-xlarge .expression .zh{font-size:21px}
+body.font-xlarge .word{font-size:37px}
+body.font-xlarge .meaning{font-size:22px}
+body.font-xlarge .phrase b{font-size:28px}
+body.font-xlarge .phrase span{font-size:20px}
+body.font-xlarge .gpanel{font-size:23px}
+body.font-xlarge .pattern{font-size:34px}
+body.font-xlarge .qbox p{font-size:24px}
+body.font-xlarge .option{font-size:22px}
+body.font-xlarge .spell-zh{font-size:23px}
+body.font-xlarge .spell-input{font-size:22px}
+body.font-xlarge .spell-example{font-size:21px}
+body.font-xlarge .modal-body{font-size:22px}
+body.font-xlarge .dbox{font-size:20px}
+body.font-xlarge .quick-link{font-size:14px}
+
+
+/* ===== 快速導覽可收合 ===== */
+.quick-collapse-btn{
+  display:none;
+  position:fixed;
+  right:18px;
+  top:14px;
+  z-index:1450;
+  border:0;
+  border-radius:999px;
+  padding:9px 14px;
+  background:#5b3e92;
+  color:#fff;
+  font-weight:900;
+  cursor:pointer;
+  box-shadow:0 10px 24px rgba(65,43,89,.18);
+}
+.quick-nav-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:6px;
+}
+.quick-collapse-close{
+  border:1px solid #d7cae2;
+  background:#fff;
+  color:#5b3e92;
+  border-radius:999px;
+  padding:5px 10px;
+  font-size:11px;
+  font-weight:800;
+  cursor:pointer;
+}
+body.quick-collapsed .quick-panel{
+  display:none!important;
+}
+body.quick-collapsed .quick-collapse-btn{
+  display:block!important;
+}
+/* 收合後，字體控制列保持可見且不重疊 */
+body.quick-collapsed .display-controls{
+  right:150px!important;
+}
+@media(max-width:760px){
+  .quick-collapse-btn{
+    top:10px;
+    right:10px;
+  }
+  body.quick-collapsed .display-controls{
+    right:auto!important;
+  }
+}
+
 </style>
 </head>
-<body>
+<body class="font-medium">
 
 <div class="display-controls" id="displayControls">
   <span class="label">字體</span>
@@ -768,14 +891,19 @@ body:not(.image-contain) .modal-word-image{
   <button class="display-btn active" data-scale="1.00" onclick="setFontScale(1.00,this)">中</button>
   <button class="display-btn" data-scale="1.12" onclick="setFontScale(1.12,this)">大</button>
   <button class="display-btn" data-scale="1.25" onclick="setFontScale(1.25,this)">特大</button>
-  <button class="display-btn image-mode-btn" id="imageModeBtn" onclick="toggleImageMode()">圖片：滿版裁切</button>
 </div>
 
 
+
+<button class="quick-collapse-btn" id="quickCollapseBtn" onclick="toggleQuickNav()">☰ 快速導覽</button>
 <nav class="quick-panel quick-panel-visible" id="quickPanel" aria-label="Unit 12 快速導覽">
-  <div class="quick-nav-title">快速導覽</div>
+  <div class="quick-nav-head">
+    <div class="quick-nav-title">快速導覽</div>
+    <button class="quick-collapse-close" onclick="toggleQuickNav(false)">收合 ▲</button>
+  </div>
   <div class="quick-grid" id="quickGrid"></div>
 </nav>
+
 <div class="layout">
 <main class="main">
 <section class="hero" id="top">
@@ -1347,7 +1475,7 @@ const sections=[
 ];
 let current=0;
 function go(id){document.getElementById(id)?.scrollIntoView({behavior:"smooth",block:"start"})}
-function toggleQuick(force){ const p=document.getElementById("quickPanel"); if(p) p.classList.add("open"); }
+function toggleQuick(force){ if(force===true){toggleQuickNav(true)} else if(force===false){toggleQuickNav(false)} else {toggleQuickNav();} }
 function renderQuick(){
  const g=document.getElementById("quickGrid");g.innerHTML="";
  sections.forEach((x,i)=>{const b=document.createElement("button");b.className="quick-link";b.dataset.target=x[0];b.textContent=(i+1)+". "+x[1];b.onclick=()=>{go(x[0]);toggleQuick(false)};g.appendChild(b)});
@@ -1365,10 +1493,6 @@ document.addEventListener("DOMContentLoaded",()=>{
 });
 document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeModal();toggleQuick(false)}});
 
-);
-  const btn=document.getElementById("imageFitBtn");
-  if(btn) btn.textContent=on?"圖片：完整顯示":"圖片：滿版裁切";
-}
 
 
 /* ===== 系統化上課流程 ===== */
@@ -1480,29 +1604,39 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 
 function setFontScale(scale,btn){
-  document.documentElement.style.setProperty("--ui-scale",String(scale));
+  const map={"0.9":"font-small","1":"font-medium","1.12":"font-large","1.25":"font-xlarge"};
+  document.body.classList.remove("font-small","font-medium","font-large","font-xlarge");
+  const key=String(Number(scale));
+  document.body.classList.add(map[key]||"font-medium");
   document.querySelectorAll('.display-btn[data-scale]').forEach(b=>b.classList.remove('active'));
   if(btn) btn.classList.add('active');
   try{localStorage.setItem("u12FontScale",String(scale));}catch(e){}
 }
-function toggleImageMode(){
-  const contain=!document.body.classList.contains("image-contain");
-  document.body.classList.toggle("image-contain",contain);
-  const btn=document.getElementById("imageModeBtn");
-  if(btn) btn.textContent=contain?"圖片：完整顯示":"圖片：滿版裁切";
-  try{localStorage.setItem("u12ImageContain",contain?"1":"0");}catch(e){}
-}
+
 document.addEventListener("DOMContentLoaded",()=>{
   try{
     const scale=Number(localStorage.getItem("u12FontScale")||"1");
-    document.documentElement.style.setProperty("--ui-scale",String(scale));
+    const map={"0.9":"font-small","1":"font-medium","1.12":"font-large","1.25":"font-xlarge"};
+    document.body.classList.remove("font-small","font-medium","font-large","font-xlarge");
+    document.body.classList.add(map[String(scale)]||"font-medium");
     document.querySelectorAll('.display-btn[data-scale]').forEach(b=>{
       b.classList.toggle("active",Math.abs(Number(b.dataset.scale)-scale)<0.001);
     });
-    if(localStorage.getItem("u12ImageContain")==="1"){
-      document.body.classList.add("image-contain");
-      const btn=document.getElementById("imageModeBtn");
-      if(btn) btn.textContent="圖片：完整顯示";
+  }catch(e){}
+});
+
+
+function toggleQuickNav(force){
+  const collapsed = typeof force==="boolean"
+    ? !force
+    : !document.body.classList.contains("quick-collapsed");
+  document.body.classList.toggle("quick-collapsed", collapsed);
+  try{localStorage.setItem("u12QuickCollapsed", collapsed ? "1" : "0");}catch(e){}
+}
+document.addEventListener("DOMContentLoaded",()=>{
+  try{
+    if(localStorage.getItem("u12QuickCollapsed")==="1"){
+      document.body.classList.add("quick-collapsed");
     }
   }catch(e){}
 });
