@@ -881,6 +881,95 @@ body.quick-collapsed .display-controls{
   }
 }
 
+
+/* ===== 彈跳教學視窗：同步放大字體 ===== */
+.modal-head h3{font-size:34px!important}
+.modal-body{font-size:19px!important;line-height:1.8!important}
+.modal-body p,
+.modal-body li,
+.modal-body .lead,
+.modal-body .coll,
+.modal-body .exam,
+.modal-body .trap,
+.modal-body .family,
+.modal-body .context-sentence,
+.modal-body .dbox{
+  font-size:18px!important;
+  line-height:1.8!important;
+}
+.modal-body b,
+.modal-body strong{font-size:1.02em}
+.modal-body .pos{
+  font-size:15px!important;
+}
+.modal-body .modal-word-image{
+  min-height:230px;
+}
+
+/* 小 */
+body.font-small .modal-head h3{font-size:29px!important}
+body.font-small .modal-body{font-size:16px!important}
+body.font-small .modal-body p,
+body.font-small .modal-body li,
+body.font-small .modal-body .lead,
+body.font-small .modal-body .coll,
+body.font-small .modal-body .exam,
+body.font-small .modal-body .trap,
+body.font-small .modal-body .family,
+body.font-small .modal-body .context-sentence,
+body.font-small .modal-body .dbox{font-size:15px!important}
+body.font-small .modal-body .pos{font-size:13px!important}
+
+/* 中 */
+body.font-medium .modal-head h3{font-size:34px!important}
+body.font-medium .modal-body{font-size:19px!important}
+body.font-medium .modal-body p,
+body.font-medium .modal-body li,
+body.font-medium .modal-body .lead,
+body.font-medium .modal-body .coll,
+body.font-medium .modal-body .exam,
+body.font-medium .modal-body .trap,
+body.font-medium .modal-body .family,
+body.font-medium .modal-body .context-sentence,
+body.font-medium .modal-body .dbox{font-size:18px!important}
+body.font-medium .modal-body .pos{font-size:15px!important}
+
+/* 大 */
+body.font-large .modal-head h3{font-size:40px!important}
+body.font-large .modal-body{font-size:22px!important}
+body.font-large .modal-body p,
+body.font-large .modal-body li,
+body.font-large .modal-body .lead,
+body.font-large .modal-body .coll,
+body.font-large .modal-body .exam,
+body.font-large .modal-body .trap,
+body.font-large .modal-body .family,
+body.font-large .modal-body .context-sentence,
+body.font-large .modal-body .dbox{font-size:21px!important}
+body.font-large .modal-body .pos{font-size:17px!important}
+
+/* 特大：教室投影 */
+body.font-xlarge .modal-head h3{font-size:46px!important}
+body.font-xlarge .modal-body{font-size:25px!important}
+body.font-xlarge .modal-body p,
+body.font-xlarge .modal-body li,
+body.font-xlarge .modal-body .lead,
+body.font-xlarge .modal-body .coll,
+body.font-xlarge .modal-body .exam,
+body.font-xlarge .modal-body .trap,
+body.font-xlarge .modal-body .family,
+body.font-xlarge .modal-body .context-sentence,
+body.font-xlarge .modal-body .dbox{font-size:24px!important}
+body.font-xlarge .modal-body .pos{font-size:19px!important}
+
+/* 避免字體放大後彈窗過窄 */
+.modal{width:min(960px,96vw)!important}
+.detail-grid{gap:14px!important}
+@media(max-width:760px){
+  .detail-grid{grid-template-columns:1fr!important}
+  .modal{width:96vw!important}
+}
+
 </style>
 </head>
 <body class="font-medium">
